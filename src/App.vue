@@ -23,7 +23,7 @@ export default {
 
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif, Inter;
+  font-family: 'Inter';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -6,6 +6,11 @@
             header-button-icon="user"
             header-button-link=""
         >
+          <comparison-chart
+            :bar1Color="'maroon'"
+            :bar2Color="'#b85b27'"
+            :chart="{ height: '50px', width: '100%'}"
+          ></comparison-chart>
         </card>
         <card
           header
@@ -18,11 +23,13 @@
 </template>
 
 <script>
-import Card from "../../Card";
+import Card from "../../Card"
+import ComparisonChart from '../../ComparisonChart'
 
 export default {
   components: {
     Card,
+    ComparisonChart
   },
 };
 </script>

@@ -49,6 +49,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 0 10px;
+    margin-bottom: 20px;
 }
 
 .card-header a {
