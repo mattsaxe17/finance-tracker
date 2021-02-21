@@ -15,22 +15,22 @@
 
 <script>
 export default {
-    props: {
-        passedTabs: Array
+  props: {
+    passedTabs: Array,
+  },
+  emits: ["setCurrentTab"],
+  data() {
+    return {
+      currentTab: this.passedTabs[0].id,
+      tabs: this.passedTabs,
+    };
+  },
+  methods: {
+    changeTab(tabId) {
+      this.currentTab = tabId;
+      this.$emit("setCurrentTab", tabId);
     },
-    emits: ['setCurrentTab'],
-    data() {
-        return {
-            currentTab: this.passedTabs[0].id,
-            tabs: this.passedTabs
-        }
-    },
-    methods: {
-        changeTab(tabId) {
-            this.currentTab = tabId;
-            this.$emit('setCurrentTab', tabId);
-        }
-    },
+  },
 };
 </script>
 
@@ -39,7 +39,6 @@ export default {
   width: 100%;
   background-color: white;
   display: flex;
-  font-family: "Inter";
   font-weight: 600;
 }
 
@@ -66,7 +65,7 @@ export default {
 }
 
 .active {
-  border-top: 3px solid maroon;
+  border-top: 3px solid var(--color-1);
   background-color: #ebebeb;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :style="{ 'background-color': $store.state.colors[0]}">
     <a href="">
         <i class="fas fa-bars fa-lg"></i>
     </a>
@@ -16,7 +16,6 @@ export default {};
 <style>
 .header {
   height: 70px;
-  background-color: maroon;
   display: flex;
   justify-content: space-between;
   align-items: center;

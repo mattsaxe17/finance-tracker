@@ -19,18 +19,17 @@ export default {
             return '';
         },
         moneyValue() {
-            if(this.$route.name == 'Cash') return this.$store.state.cashVal;
-            if(this.$route.name == 'Credit') return this.$store.state.creditVal;
-            if(this.$route.name == 'Investments') return this.$store.state.investmentsVal;
+            if(this.$route.name == 'Cash') return 534//this.$store.state.cashVal;
+            if(this.$route.name == 'Credit') return 123//this.$store.state.creditVal;
+            if(this.$route.name == 'Investments') return 234//this.$store.state.investmentsVal;
             return 0;
         }
     }
 };
 </script>
 
-<style>
+<style scoped>
 .hero-content {
-    font-family: 'Inter';
     font-weight: 600;
     height: 200px;
     display: flex;

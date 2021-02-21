@@ -1,8 +1,8 @@
 <template>
-  <div 
+  <div
     class="comaprison-chart"
   >
-    <div 
+    <div
         class="chart"
         :style="{ width: this.chart.width, height: this.chart.height }"
     >
@@ -25,8 +25,6 @@
 <script>
 export default {
   props: {
-    bar1Color: String,
-    bar2Color: String,
     chart: {
       height: Number,
       width: Number,
@@ -37,12 +35,12 @@ export default {
       bar1: {
         width: "35%",
         label: "Expenses",
-        color: this.bar1Color,
+        color: this.$store.state.colors[0],
       },
       bar2: {
         width: "12%",
         label: "Income",
-        color: this.bar2Color,
+        color: this.$store.state.colors[2],
       },
     };
   },
@@ -51,8 +49,8 @@ export default {
 
 <style>
 .chart {
-    width: 100%;
-    padding: 0;
+  width: 100%;
+  padding: 0;
   margin: 0;
   display: flex;
   position: relative;
